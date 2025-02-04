@@ -1,0 +1,27 @@
+name: Setup Repository
+
+on:
+  create:  # This runs when the repository is created (e.g., from a template)
+    branches:
+      - main  # Adjust to match the default branch of the template
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update package.json with repository name
+        run: |
+          REPO_NAME=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]' | tr -cs 'a-z0-9.-' '-')
+          echo "Updating package.json with name: $REPO_NAME"
+          sed -i "s/\"name\": \".*\"/\"name\": \"$REPO_NAME\"/" package.json
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add package.json
+          git commit -m "Update package.json with repository name"
+          git push origin main
