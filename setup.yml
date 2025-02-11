@@ -1,9 +1,9 @@
 name: Setup Repository
 
 on:
-  create:  # This runs when the repository is created (e.g., from a template)
+  create: # This runs when the repository is created (e.g., from a template)
     branches:
-      - main  # Adjust to match the default branch of the template
+      - main # Adjust to match the default branch of the template
 
 jobs:
   setup:

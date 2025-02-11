@@ -36,24 +36,28 @@ git clone https://github.com/rohitmsaxena/react-vite-tailwind-daisyui-starter.gi
 cd react-vite-tailwind-daisyui-starter
 ```
 
-### **2️⃣   Install Dependencies**
+### **2️⃣ Install Dependencies**
 
 ```sh
 npm install
 ```
 
 ### **3️⃣ Start the Development Server**
+
 ```sh
 npm run dev
 ```
+
 Open your browser and navigate to http://localhost:3000 to see your app running.
 
 ## 🛠️ Customization
 
 ### **Tailwind CSS Configuration**
+
 You can customize Tailwind CSS by editing the `tailwind.config.js` file. Add or modify themes, plugins, and more to suit your project's needs.
 
 ### **Daisy UI Themes**
+
 Daisy UI comes with multiple themes out of the box. To change the theme, modify the `daisyui` section in `tailwind.config.js`:
 
 ```js
@@ -65,17 +69,19 @@ module.exports = {
 ```
 
 ### GitHub Action for Auto-Renaming
+
 The included GitHub Action automatically updates the package.json name field to match your repository name. No manual configuration is required.
 
 ## 📂 Project Structure
+
 ```
 react-vite-tailwind-daisyui-starter/
 ├── public/            # Static assets
 ├── src/               # Source code
 │   ├── assets/        # Images, icons, etc.
 │   ├── components/    # React components
-│   ├── App.jsx        # Main application component
-│   └── main.jsx       # Entry point
+│   ├── App.tsx        # Main application component
+│   └── main.tsx       # Entry point
 ├── .github/           # GitHub Actions and workflows
 ├── tailwind.config.js # Tailwind CSS configuration
 ├── vite.config.js     # Vite configuration
@@ -94,6 +100,7 @@ Contributions are welcome! If you have any ideas, suggestions, or bug fixes, fee
 5. Open a pull request.
 
 ## 📄 License
+
 This project is licensed under the MIT License. See the [LICENSE](https://chat.deepseek.com/a/chat/s/LICENSE) file for details.
 
 ## 🙏 Acknowledgments
